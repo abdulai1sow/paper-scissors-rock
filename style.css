@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
 *{
   margin: 0;
   padding: 0;
@@ -13,6 +16,16 @@ header{
 header h1{
   color: #25272e;
   text-align: center;
-  font-family: Asap, sans-serif;
-
+  font-family: 'Indie Flower', cursive;
+}
+.score-board{
+  margin: 30px 500px;
+  border: 3px solid #fff;
+  border-radius: 4px;
+  text-align: center;
+  width: 200px;
+  color: #fff;
+  font-size: 46px;
+  padding: 15px 20px;
+  font-family: 'Indie Flower', cursive;
 }
