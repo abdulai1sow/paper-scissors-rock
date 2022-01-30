@@ -3,6 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: #25272e;
+}
 header{
-  back
+  background: #fff;
+  padding: 20px;
+}
+header h1{
+  color: #25272e;
+  text-align: center;
+  font-family: Asap, sans-serif;
+
 }
