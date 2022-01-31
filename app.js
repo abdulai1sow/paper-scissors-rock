@@ -9,14 +9,22 @@ const rock_div = document.getElementById('r');
 const paper_div = document.getElementById('p');
 const scissors_div = document.getElementById('s');
 
-rock_div.addEventListener('click', function() {
-  console.log('pressed rock thank you')
-})
+//when click on choices, compare and give result
+function game()
 
-paper_div.addEventListener('click', function () {
-  console.log('pressed rock thank you')
-})
+function main() {
+  //event listeners for the choices
+  rock_div.addEventListener('click', function () {
+    game('r');
+  })
 
-scissors_div.addEventListener('click', function () {
-  console.log('pressed rock thank you')
-})
+  paper_div.addEventListener('click', function () {
+    game('p');
+  })
+
+  scissors_div.addEventListener('click', function () {
+    game('s');
+  })
+}
+
+main();
