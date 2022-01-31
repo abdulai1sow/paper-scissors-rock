@@ -10,7 +10,16 @@ const paper_div = document.getElementById('p');
 const scissors_div = document.getElementById('s');
 
 //when click on choices, compare and give result
-function game()
+//game reference game from event
+function getComputerChoice() {
+  const choices = ['r', 'p', 's'];
+  console.log(Math.floor(Math.random() * 3));
+}                                 
+getComputerChoice();
+
+function game(userChoice) {
+
+}
 
 function main() {
   //event listeners for the choices
