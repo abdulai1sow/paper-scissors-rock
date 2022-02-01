@@ -25,19 +25,32 @@ function convertToWord(letter) {
 }
 
 //add score to board & show win or lose
+//win function
 function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_div.innerHTML = `${convertToWord (userChoice)} beats ${convertToWord (computerChoice)}. you win`;
+  const smallUserWord = 'user'.fontsize(3).sub();
+  const smallCompWord = 'comp'.fontsize(3).sub();
+  result_div.innerHTML = `${convertToWord (userChoice)}${smallUserWord} beats ${convertToWord (computerChoice)}${smallCompWord}. you win`;
 }
-
+//lose function
 function lose() {
-  console.log('lose');
+  userScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  const smallUserWord = 'user'.fontsize(3).sub();
+  const smallCompWord = 'comp'.fontsize(3).sub();
+  result_div.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. you win`;
 }
-
+//draw function
 function draw() {
-  console.log('draw');
+  userScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  const smallUserWord = 'user'.fontsize(3).sub();
+  const smallCompWord = 'comp'.fontsize(3).sub();
+  result_div.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. you win`;
 }
 
 //mind of the game
