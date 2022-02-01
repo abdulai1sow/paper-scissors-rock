@@ -15,7 +15,19 @@ function getComputerChoice() {
   const choices = ['r', 'p', 's'];
   const randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
-}                                 
+}           
+
+function win() {
+  console.log('win');
+}
+
+function lose() {
+  console.log('lose');
+}
+
+function draw() {
+  console.log('draw');
+}
 
 //mind of the game
 function game(userChoice) {
@@ -26,17 +38,17 @@ function game(userChoice) {
     case 'rs':
     case 'pr':
     case 'sp':
-      console.log('user wins');
+      win();
       break;
     case 'rp':
     case 'ps':
     case 'sr':
-      console.log('user loses');
+      lose();
       break;
     case 'rr':
     case 'pp':
     case 'ss':
-      console.log('its a draw.');
+      draw();
       break;
   }
 }
