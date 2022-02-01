@@ -1,6 +1,6 @@
 //the variable
-const userScore = 0;
-const computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 const userScore_span = document.getElementById('user-score');
 const computerScore_span = document.getElementById('computer-score');
 const scoreBoard_div = document.querySelector('.score-board');
@@ -18,7 +18,10 @@ function getComputerChoice() {
 }           
 
 function win() {
-  console.log('win');
+  userScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  
 }
 
 function lose() {
