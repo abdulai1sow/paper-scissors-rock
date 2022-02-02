@@ -4,3 +4,5 @@ In highschool we played this game to see who was going to get the ball first in 
 
 technology:
 html/css/javascrip
+
+hosting: Netlify
