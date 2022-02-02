@@ -4,7 +4,7 @@ let computerScore = 0;
 const userScore_span = document.getElementById('user-score');
 const computerScore_span = document.getElementById('computer-score');
 const scoreBoard_div = document.querySelector('.score-board');
-const result_div = document.querySelector('.result > p');
+const result_p = document.querySelector('.result > p');
 const rock_div = document.getElementById('r');
 const paper_div = document.getElementById('p');
 const scissors_div = document.getElementById('s');
@@ -21,8 +21,10 @@ function getComputerChoice() {
 function convertToWord(letter) {
   if (letter === 'r') return 'Rock';
   if (letter === 'p') return 'Paper';
-  return 'scissors';
+  return 'scissor';
+
 }
+
 
 //add score to board & show win or lose
 //win function
@@ -32,25 +34,23 @@ function win(userChoice, computerChoice) {
   computerScore_span.innerHTML = computerScore;
   const smallUserWord = 'user'.fontsize(3).sub();
   const smallCompWord = 'comp'.fontsize(3).sub();
-  result_div.innerHTML = `${convertToWord (userChoice)}${smallUserWord} beats ${convertToWord (computerChoice)}${smallCompWord}. you win`;
+  result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. you win`;
+  document.getElementById(userChoice).classList.add('green-glow');
 }
 //lose function
-function lose() {
-  userScore++;
+function lose(userChoice, computerChoice) {
+  computerScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
   const smallUserWord = 'user'.fontsize(3).sub();
   const smallCompWord = 'comp'.fontsize(3).sub();
-  result_div.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. you win`;
+  result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. you win`;
 }
 //draw function
-function draw() {
-  userScore++;
-  userScore_span.innerHTML = userScore;
-  computerScore_span.innerHTML = computerScore;
+function draw(userChoice, computerChoice) {
   const smallUserWord = 'user'.fontsize(3).sub();
   const smallCompWord = 'comp'.fontsize(3).sub();
-  result_div.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. you win`;
+  result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}${smallCompWord}. its a draw`;
 }
 
 //mind of the game
